@@ -1,0 +1,5 @@
+version: '3.8'
+services:
+  assembly-app:
+    build: .
+    image: hello-world-assembly
