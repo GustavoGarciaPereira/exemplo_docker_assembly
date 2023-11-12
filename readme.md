@@ -6,7 +6,7 @@ Este projeto contém um simples programa em Assembly que imprime a mensagem "Gus
 
 ## Estrutura do Projeto
 
--   `gustavo.asm`: Arquivo fonte do programa Assembly.
+-   `hello_world.asm`: Arquivo fonte do programa Assembly.
 -   `Dockerfile`: Define as instruções para construir a imagem Docker que compila e executa o programa Assembly.
 -   `docker-compose.yml`: Configuração para facilitar a construção e execução da imagem Docker usando Docker Compose.
 
@@ -23,9 +23,9 @@ Para montar e executar o programa Assembly localmente, você precisará do NASM 
 
 bashCopy code
 
-`nasm -f elf64 gustavo.asm -o gustavo.o
-ld gustavo.o -o gustavo
-./gustavo` 
+`nasm -f elf64 hello_world.asm -o hello_world.o
+ld hello_world.o -o hello_world
+./hello_world` 
 
 ### Usando Docker
 
@@ -35,7 +35,7 @@ Para construir a imagem Docker, execute o seguinte comando no diretório do proj
 
 bashCopy code
 
-`docker build -t gustavo-assembly-app .` 
+`docker build -t hello_world-assembly-app .` 
 
 #### Executando o Container Docker
 
@@ -43,7 +43,7 @@ Após construir a imagem, você pode executar o container usando:
 
 bashCopy code
 
-`docker run gustavo-assembly-app` 
+`docker run hello_world-assembly-app` 
 
 ### Usando Docker Compose
 
